@@ -14,6 +14,12 @@ namespace SortingGUI
         [STAThread]
         static void Main()
         {
+            Logs.Config config = new Logs.Config("./config.ini");
+            if(!config.IsInitialized())
+            {
+                config.InitializeFile();
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

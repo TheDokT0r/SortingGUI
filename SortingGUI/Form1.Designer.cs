@@ -49,6 +49,7 @@
             this.btn_isSorted = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.btn_randomize = new System.Windows.Forms.Button();
+            this.btn_config = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart_SortingProgress)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,11 +230,23 @@
             this.btn_randomize.UseVisualStyleBackColor = true;
             this.btn_randomize.Click += new System.EventHandler(this.btn_randomize_Click);
             // 
+            // btn_config
+            // 
+            this.btn_config.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_config.Location = new System.Drawing.Point(208, 568);
+            this.btn_config.Name = "btn_config";
+            this.btn_config.Size = new System.Drawing.Size(151, 52);
+            this.btn_config.TabIndex = 16;
+            this.btn_config.Text = "Config";
+            this.btn_config.UseVisualStyleBackColor = true;
+            this.btn_config.Click += new System.EventHandler(this.btn_config_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 633);
+            this.Controls.Add(this.btn_config);
             this.Controls.Add(this.btn_randomize);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btn_isSorted);
@@ -280,6 +293,7 @@
         private System.Windows.Forms.Button btn_isSorted;
         public System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button btn_randomize;
+        private System.Windows.Forms.Button btn_config;
     }
 }
 

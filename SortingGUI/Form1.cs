@@ -158,7 +158,7 @@ namespace SortingGUI
         void printData(Data data)
         {
             //Saves the data to the logs
-            SaveData saveData = new SaveData(data.arr, data.loops, 0, data.progress, data.sortingType);
+            var saveData = new Logs.SaveData(data.arr, data.loops, 0, data.progress, data.sortingType);
             saveData.toText(logsPath);
 
             txt_loops.Text = "Loops: " + data.loops.ToString();
@@ -194,6 +194,21 @@ namespace SortingGUI
 
             MessageBox.Show("Logs file doesn't exist", "Error");
         }
+
+
+        private void btn_config_Click(object sender, EventArgs e)
+        {
+            string path = "./config.ini";
+
+            if (File.Exists(path))
+            {
+                System.Diagnostics.Process.Start("notepad.exe", path);
+                return;
+            }
+
+            MessageBox.Show("Can't find config file. Please try to reset the program.");
+        }
+
 
 
         private void button1_Click(object sender, EventArgs e) //Load an array from a txt file
@@ -276,6 +291,7 @@ namespace SortingGUI
 
             MessageBox.Show("True", "Is sorted");
         }
+
 
         private void btn_randomize_Click(object sender, EventArgs e)
         {
